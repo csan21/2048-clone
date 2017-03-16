@@ -2,7 +2,7 @@ $(document).ready(function() {
   game = new Game();
 
   function render_board(){
-    array_of_rows = $("table#256_table tr");
+    array_of_rows = $("table#256-table tr");
     for( var r = 0; r < array_of_rows.length; r++ ){
       for( var c = 0; c < array_of_rows.length; c++){
         $($(array_of_rows[r]).children()[c]).html(game.board[r][c]);
