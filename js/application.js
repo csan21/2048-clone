@@ -1,54 +1,54 @@
 $(document).ready(function() {
   game = new Game();
 
-  function render_board(){
-    array_of_rows = $("table#256-table tr");
-    for( var r = 0; r < array_of_rows.length; r++ ){
-      for( var c = 0; c < array_of_rows.length; c++){
-        $($(array_of_rows[r]).children()[c]).html(game.board[r][c]);
+  function renderBoard(){
+    arrayOfRows = $("table#256-table tr");
+    for(var r = 0; r < arrayOfRows.length; r++ ){
+      for(var c = 0; c < arrayOfRows.length; c++){
+        $($(arrayOfRows[r]).children()[c]).html(game.board[r][c]);
         }
       }
     }
   // hide zeroes on that board
-  game.hide_zeros();
+  game.hideZeros();
   // render the board in the beginning
-  render_board();
+  renderBoard();
   // put the zeros on that board
-  game.show_zeros();
+  game.showZeros();
 
   Mousetrap.bind('up', function(){
-   game.up_key();
+   game.upKey();
    // insert the number
-   game.insert_num();
+   game.insertNum();
    // hide the zeroes
-   game.hide_zeros();
+   game.hideZeros();
    // show the board
-   render_board();
+   renderBoard();
    // puts the zeroes back where they were
-   game.show_zeros();
+   game.showZeros();
   }, 'keyup');
 
   Mousetrap.bind('down', function(){
-    game.down_key();
-    game.insert_num();
-    game.hide_zeros();
-    render_board();
-    game.show_zeros();
+    game.downKey();
+    game.insertNum();
+    game.hideZeros();
+    renderBoard();
+    game.showZeros();
   }, 'keyup');
 
   Mousetrap.bind('left', function(){
-    game.left_key();
-    game.insert_num();
-    game.hide_zeros();
-    render_board();
-    game.show_zeros();
+    game.leftKey();
+    game.insertNum();
+    game.hideZeros();
+    renderBoard();
+    game.showZeros();
   }, 'keyup');
 
   Mousetrap.bind('right', function(){
-    game.right_key();
-    game.insert_num();
-    game.hide_zeros();
-    render_board();
-    game.show_zeros();
+    game.rightKey();
+    game.insertNum();
+    game.hideZeros();
+    renderBoard();
+    game.showZeros();
   }, 'keyup');
 });
