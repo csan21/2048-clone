@@ -49,8 +49,8 @@ Game.prototype.showZeros = function(){
 
 Game.prototype.insertNum = function(){
   // turn the board into one single array
-  var singleArray = this.board[0].concat(this.board[1]).concat(this.board[2]).concat(this.board[3]);
   // go through the single array and look for any 0's log their indexes
+  var singleArray    = this.board[0].concat(this.board[1]).concat(this.board[2]).concat(this.board[3]);
   var arrayOfIndexes = [];
 
   for(var i = 0; i < singleArray.length; i++){
